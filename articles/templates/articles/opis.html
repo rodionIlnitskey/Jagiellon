@@ -1,0 +1,25 @@
+
+<title>giellon</title>
+
+{% block content %}
+
+
+
+<h1>dbgffgb</h1>
+
+<div class="obsh">
+
+
+
+
+    <form action="{% url 'articles:leave_comment' %}" method="POST">
+      {% csrf_token %}
+      <input type="text" required placeholder="Your name" name="name"><br>
+      <textarea name="text" required="" placeholder="Text" cols="30" rows="10"></textarea><br>
+      <button type="submit">Comment</button>
+
+    </form>
+
+</div>
+
+{% endblock %}

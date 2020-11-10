@@ -1,0 +1,46 @@
+{% load static %}
+<title>Jagiellon</title>
+<link rel="stylesheet" href="{% static "css/index.css" %}"/>
+{% block content %}
+
+
+{% if user.is_authenticated %}
+  <p>Hi {{ user.username }}!</p>
+  <p><a href="{% url 'logout' %}">Log out</a></p>
+{% else %}
+  <p>You are not logged in.</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+
+
+<h1>dbgffgb</h1>
+
+<div class="obsh">
+    {% if latest_comments_list %}
+
+        {% for c in latest_comments_list %}
+            <p>
+                <div class="mema">
+                    <strong>{{c.author_name}}</strong>
+                </div>
+                <div class="teta">
+                    <p>{{c.comment_text}}</p>
+                </div>
+            </p>
+        {% endfor %}
+
+    {% else %}
+      <div class="trumpmygob">
+          <h3>Никто пока не решился оставить комментарий</h3>
+      </div>
+
+    {% endif %}
+    <p><a href="{% url 'articles:opis' %}">665656</a></p>
+
+
+
+</div>
+
+
+
+{% endblock %}
