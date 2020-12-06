@@ -1,19 +1,36 @@
 {% load static %}
-<title>Jagiellon</title>
+<title>Jagiellonsky</title>
 <link rel="stylesheet" href="{% static "css/index.css" %}"/>
 {% block content %}
 
 
-{% if user.is_authenticated %}
-  <p>Hi {{ user.username }}!</p>
-  <p><a href="{% url 'logout' %}">Log out</a></p>
-{% else %}
-  <p>You are not logged in.</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+<header>
+  <h1>jagiellonsky</h1>
+    {% if user.is_authenticated %}
+    <div class="cor">
+      <p>Hi {{ user.username }}!</p>
+    </div>
 
+    <div class="roc">
+      <p><a href="{% url 'logout' %}">Выйти</a></p>
+    </div>
 
-<h1>dbgffgb</h1>
+    {% else %}
+
+    <div class="xxx">
+      <p>Вы не зарегестрированны</p>
+      <a href="{% url 'signup' %}">Зарегестрироваться</a>
+    </div>
+
+    <div class="fff">
+      <p>Если у вас есть аккаунт</p>
+      <a href="{% url 'login' %}">Войти</a>
+    </div>
+
+    {% endif %}
+
+</header>
+
 
 <div class="obsh">
     {% if latest_comments_list %}
@@ -26,6 +43,15 @@
                 <div class="teta">
                     <p>{{c.comment_text}}</p>
                 </div>
+                <div class="teta">
+
+                    {% if user.is_authenticated %}
+                        <h7>{{ user.username }}</h7>
+                    {% else %}
+                        <h7>Анонимный пользователь</h7>
+                    {% endif %}
+
+                </div>
             </p>
         {% endfor %}
 
@@ -35,8 +61,36 @@
       </div>
 
     {% endif %}
-    <p><a href="{% url 'articles:opis' %}">665656</a></p>
+    <h1><a href="{% url 'articles:opis' %}">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>
+    </a></h1>
 
+
+    <div class="rightnews">
+      {% if user.is_authenticated %}
+      <div class="cr">
+        <p>Hi {{ user.username }}!</p>
+      </div>
+
+      <div class="rc">
+        <p><a href="{% url 'logout' %}">Выйти</a></p>
+      </div>
+
+      {% else %}
+
+      <div class="xx">
+        <p>Вы не зарегестрированны</p>
+        <a href="{% url 'signup' %}">Зарегестрироваться</a>
+      </div>
+
+      <div class="ff">
+        <p>Если у вас есть аккаунт</p>
+        <a href="{% url 'login' %}">Войти</a>
+      </div>
+    </div>
+    {% endif %}
 
 
 </div>
