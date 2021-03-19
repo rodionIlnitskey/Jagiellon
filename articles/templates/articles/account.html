@@ -1,0 +1,26 @@
+{% load static %}
+<title>Jagiellonsky</title>
+<link rel="stylesheet" href="{% static "css/index.css" %}"/>
+{% block content %}
+
+
+<header>
+  <h1>jagiellonsky</h1>
+
+
+</header>
+
+
+{% if user.is_authenticated %}
+    <h7>{{ user.username }}</h7>
+{% endif %}
+
+<p><a href="{% url 'articles:index' %}">Вернуться</a></p>
+
+
+
+</div>
+
+
+
+{% endblock %}

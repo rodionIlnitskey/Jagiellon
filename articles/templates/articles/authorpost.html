@@ -1,0 +1,25 @@
+{% load static %}
+<title>Jagielly</title>
+<link rel="stylesheet" href="{% static "css/index.css" %}"/>
+
+{% block content %}
+    <p>
+                <div class="mema">
+                    <strong>{{post.author_name}}</strong>
+                </div>
+                <div class="teta">
+                    <p>{{post.comment_text}}</p>
+                </div>
+        </a>
+                <div class="tet">
+
+                    {% if user.is_authenticated %}
+                        <h7>{{ user.username }}</h7>
+                    {% else %}
+                        <h7>Анонимный пользователь</h7>
+                    {% endif %}
+
+                   
+
+                </div>
+{% endblock %}
