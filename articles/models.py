@@ -28,11 +28,13 @@ class Article(models.Model):
         return self.title
 
 class Author(models.Model):
-    author_name = models.CharField('имя', max_length = 20)
+    #author_name = models.CharField('имя', max_length = 20)
+    pass
     
 
 class Comment(models.Model):
-    author = models.ForeignKey(Author, on_delete = models.CASCADE, null=True)
+    #author = models.ForeignKey(Author, on_delete = models.CASCADE, null=True)
+    author_name = models.CharField('имя', max_length = 20, blank=True)
     #author_name = models.CharField('имя автора', max_length = 50)
     comment_text = models.CharField('текст комментария', max_length = 200)
     
