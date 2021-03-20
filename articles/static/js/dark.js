@@ -30,5 +30,5 @@ function ChangeTheme()
       Request.open("GET", "./themes.php?theme=" + theme, true); //У вас путь может отличаться
       Request.send();
     }
-
+    
 }

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'articles',
     'accounts.apps.AccountsConfig',
     'avatar',
+
 ]
 
 MIDDLEWARE = [
