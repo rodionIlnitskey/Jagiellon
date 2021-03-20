@@ -1,34 +1,30 @@
-var btn = document.getElementById("theme-button");
-var link = document.getElementById("theme-link");
+var setTheme = localStorage.getItem('theme')
+console.log('theme:', setTheme)
 
-btn.addEventListener("click", function () { ChangeTheme(); });
-
-function ChangeTheme()
-{
-    let lightTheme = "/static/css/styles/light.css";
-    let darkTheme = "/static/css/styles/dark.css";
-
-    var currTheme = link.getAttribute("href");
-    var theme = "";
-
-    if(currTheme == lightTheme)
-    {
-   	 currTheme = darkTheme;
-   	 theme = "dark";
-    }
-    else
-    {
-   	 currTheme = lightTheme;
-   	 theme = "light";
-    }
-
-    link.setAttribute("href", currTheme);
-
-    function Save(theme)
-    {
-      var Request = new XMLHttpRequest();
-      Request.open("GET", "./themes.php?theme=" + theme, true); //У вас путь может отличаться
-      Request.send();
-    }
-    
+if (setTheme == null){
+    swapStyle('light.css')
+}else{
+    swapStyle(setTheme)
 }
+
+function swapStyle(sheet){
+    document.getElementById('mystylesheet').href = sheet
+    localStorage.setItem('theme', sheet)
+}
+
+
+        /*
+        var setTheme = localStorage.getItem('theme')
+        if (setTheme == null){
+            swapStyles('light.css')
+        }else{
+            swapStyles(setTheme)
+        }
+            
+        
+        function swapStyles(sheet){
+            document.getElementById('mystylesheet').href = sheet
+            localStorage.setItem('theme', sheet)
+        }
+        */
+        

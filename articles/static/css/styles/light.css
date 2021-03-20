@@ -1,33 +1,36 @@
-body
-{
-    background: #f4f4f4;
-    color: #111;
+body{
+    background-color: #fff;
 }
 
-.header
-{
-    background: #4a76a8;
-    color: #f4f4f4;
+h1, h2, h3, h4, h5, h6{
+    color: black;
 }
 
-.nav__item
-{
-    color: #f4f4f4;
-    background: #4a76a8;
+p, span, small{
+    color: #888;
 }
 
-.nav__item:hover, .nav__item_active
-{
-    background: #4f7faf;
+#box{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: #F8F8F8!important;
 }
 
-.theme-button
-{
-    color: #f4f4f4;
-    background: #444;
+#profile_pic{
+    display: block;
+    border-radius: 50%;
+    margin: 10px auto;
+    width: 200px;
+    border: 2px solid #e7e7e7;
+
 }
 
-.theme-button:hover
-{
-    background: #555;
+hr{
+    margin: 20px;
+    background-color: #eaeaea;
 }

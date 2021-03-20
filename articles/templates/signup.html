@@ -7,8 +7,8 @@
 
    	 <title>Site with dark theme</title>
    	 <meta charset="utf-8">
-   	 <link rel="stylesheet" type="text/css"  href="{% static "css/styles/main.css" %}">
-   	 <link rel="stylesheet" type="text/css"  href="{% static "css/styles/light.css" %}" id="theme-link">
+   	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link id="mystylesheet" rel="stylesheet" type="text/css" href="styles/light.css">
      
 </head>
 
@@ -16,31 +16,46 @@
 
 
 
-   	 <div class="wrapper">
-   		 <div class="theme-button" id="theme-button">Change theme</div>
-   		 <header class="header">
-   			 <div class="header__content">
-   				 <h1>Site with dark theme</h1>
-   				 <nav class="nav">
-   					 <div class="nav__content">
-   						 <a href="#" class="nav__item nav__item_active">Home</a>
-   						 <a href="#" class="nav__item">Blog</a>
-   						 <a href="#" class="nav__item">About</a>
-   						 <a href="#" class="nav__item">Contacts</a>
-   					 </div>
-   				 </nav>
-   			 </div>
-   		 </header>
-   		 <main class="main">
-   			 <article class="main__content">
-   				 //Тут будет Lorem Ipsum
-   			 </article>
-   		 </main>
-   	 </div>
-   	 <script type="text/javascript" src={% static "js/dark.js" %}></script>
+   	<button class="btn btn-light" onclick="swapStyle('/static/css/styles/light.css')">Light Mode</button>
+    <button class="btn btn-dark" onclick="swapStyle('/static/css/styles/dark.css')">Dark Mode</button>
+  
+
+<script type="text/javascript">
+
+    var setTheme = localStorage.getItem('theme')
+    console.log('theme:', setTheme)
+
+    if (setTheme == null){
+      swapStyle('light.css')
+    }else{
+      swapStyle(setTheme)
+    }
+
+    function swapStyle(sheet){
+      document.getElementById('mystylesheet').href = sheet
+      localStorage.setItem('theme', sheet)
+    }
 
 
+    /*
+    var setTheme = localStorage.getItem('theme')
+    if (setTheme == null){
+      swapStyles('light.css')
+    }else{
+      swapStyles(setTheme)
+    }
+      
+    
+    function swapStyles(sheet){
+      document.getElementById('mystylesheet').href = sheet
+      localStorage.setItem('theme', sheet)
+    }
+    */
+    
+  </script>
+    
 <h2>Регистрация</h2>
+
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
