@@ -34,7 +34,7 @@ class Author(models.Model):
 
 class Comment(models.Model):
     #author = models.ForeignKey(Author, on_delete = models.CASCADE, null=True)
-    author_name = models.CharField('имя', max_length = 20, blank=True)
+    author_name = models.CharField('Заголовок', max_length = 20, blank=True)
     #author_name = models.CharField('имя автора', max_length = 50)
     comment_text = models.CharField('текст комментария', max_length = 200)
     

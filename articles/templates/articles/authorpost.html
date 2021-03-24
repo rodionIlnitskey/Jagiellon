@@ -1,11 +1,19 @@
+
 {% load static %}
+
 <title>Jagielly</title>
-<link rel="stylesheet" href="{% static "css/index.css" %}"/>
+<link rel="stylesheet" href="{% static "css/authorpost.css" %}"/>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 {% block content %}
+
+<header>
+  <a href="{% url 'articles:index' %}">Jagiellonsky</a>
+</header>
+
+<div class="obsh">
     <p>
                 <div class="mema">
                     <strong>{{post.author_name}}</strong>
@@ -25,6 +33,9 @@
                    
 
                 </div>
+    </p>
     <a class="btn btn-default" href="{% url 'articles:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+</div>
+
 
 {% endblock %}

@@ -1,9 +1,17 @@
 {% extends 'articles/index.html' %}
 
 {% block content %}
-    <h1>New post</h1>
+<header>
+  <a href="{% url 'articles:index' %}">Jagiellonsky</a>
+</header>
+
+
+<div class="obsh">
+    <h1>Новый пост</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default">Сохранить</button>
     </form>
+</div>
+
 {% endblock %}
