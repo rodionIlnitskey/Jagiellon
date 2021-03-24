@@ -29,7 +29,7 @@ class Article(models.Model):
 
 class Author(models.Model):
     #author_name = models.CharField('имя', max_length = 20)
-    pass
+    avatar = models.ImageField(blank=True, upload_to='images/blog/%Y/%m/%d', help_text='150x150px', verbose_name='Ссылка картинки')
     
 
 class Comment(models.Model):
