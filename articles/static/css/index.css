@@ -20,6 +20,24 @@ body {
   background-color: #ffffff;
 }
 
+.obsh a {
+  text-decoration: none;
+}
+
+.obsh a {
+    color: #000; /* Цвет ссылок */
+   }
+   .obsh a:visited {
+    color: #000; /* Цвет посещенных ссылок */
+   }
+   .obsh a:active {
+    color: #000; /* Цвет активных ссылок */
+   }
+
+.tet {
+  background-color: #ffffff;
+}
+
 .our_plus {
   background-color: #ffffff;
   width: 40px;
@@ -55,6 +73,7 @@ h1 {
 }
 
 header {
+
     background-color: #ffffff;
     color: #19191A;
     margin-top: -25px;
@@ -78,6 +97,7 @@ header a{
 
 }
 
+
 .cor {
   margin-top: -50px;
   margin-left: 500px;
@@ -99,6 +119,7 @@ header a{
 }
 
 .rightnews {
+  text-decoration: underline;
   background-color: #ffffff;
   width: 90px;
   height: 200px;
@@ -115,6 +136,7 @@ header a{
 }
 
 .ererat {
+  text-decoration: underline;
   background-color: #ffffff;
   width: 82px;
   height: 200px;
@@ -126,12 +148,12 @@ header a{
   padding-left: 20px;
   border: 1px;
   border-radius: 4px;
-  box-shadow: 0 0 13px 3px rgba(0,0,0,.5)
+  box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
 }
 
 .rightnews .cr{
   color: #19191A;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight:bold;
   
 }
@@ -145,5 +167,5 @@ header a{
   
   background-color: #EDEEF0;
   border: 0.5px;
-  box-shadow: 0 0 13px 3px rgba(0,0,0,.5)
+  box-shadow: 0 0 5px 1px rgba(0,0,0,.5)
 }
