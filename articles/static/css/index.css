@@ -73,7 +73,6 @@ h1 {
 }
 
 header {
-
     background-color: #ffffff;
     color: #19191A;
     margin-top: -25px;
@@ -90,11 +89,9 @@ header {
 header a{
   text-decoration: none;
   font-weight:bold;
-
   color: #19191A;
   margin-left: 155px;
   font-size: 250%;
-
 }
 
 
