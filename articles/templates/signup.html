@@ -21,6 +21,7 @@
 <div class="rightnews">
   <button class="btn btn-light" onclick="swapStyle('/static/css/styles/light.css')">Light Mode</button>
   <button class="btn btn-dark" onclick="swapStyle('/static/css/styles/dark.css')">Dark Mode</button>
+
 </div>
 
 <script type="text/javascript">
@@ -38,7 +39,7 @@
       document.getElementById('mystylesheet').href = sheet
       localStorage.setItem('theme', sheet)
     }
-
+    alert("На этой странице вы можете переключать тему,однако эта функция до конца не дописана, поэтому может не работать.")
 
     /*
     var setTheme = localStorage.getItem('theme')
